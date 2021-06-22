@@ -26,7 +26,7 @@ def login_view(request):
             return redirect("main")
     else :
         form = AuthenticationForm()
-        return render(request, 'login.html', {'form':form}) #Get방식
+    return render(request, 'login.html', {'form':form}) #Get방식
 
 def logout_view(requset):
     logout(requset)
@@ -41,7 +41,7 @@ def signup_view(request):
         return redirect("main")
     else: #요청방식이 GET
         form = RegisterForm()
-        return render(request, 'signup.html', {'form':form})
+    return render(request, 'signup.html', {'form':form}) 
 
 def create_page(request):
     form = BlogForm()
